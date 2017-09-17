@@ -1,6 +1,8 @@
-var express = require('express'),
-	app     = express(),
-	path    = require('path');
+var express  = require('express'),
+	app      = express(),
+	path     = require('path'),
+	mongoose = require('mongoose'),
+	Poll     = require('./models/poll');
 
 app.set("view engine", 'ejs');
 
