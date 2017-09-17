@@ -2,7 +2,10 @@ var express  = require('express'),
 	app      = express(),
 	path     = require('path'),
 	mongoose = require('mongoose'),
-	Poll     = require('./models/poll');
+	Poll     = require('./models/poll'),
+	seedDB   = require('./seeds');
+
+seedDB();
 
 app.set("view engine", 'ejs');
 
