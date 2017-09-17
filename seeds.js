@@ -3,26 +3,6 @@ var mongoose = require('mongoose'),
 
 mongoose.connect("mongodb://localhost/voting_app", {useMongoClient: true});
 
-// Poll.create({
-// 	name: "Votam PrimMinistru",
-// 	options: [
-// 		{
-// 			name: "Ponta",
-// 			votes: 412
-// 		}, 
-// 		{
-// 			name: "Johannis",
-// 			votes: 5615
-// 		}
-// 	]
-// }, function(err, data) {
-// 	if (err) {
-// 		console.log(err);
-// 	} else {
-// 		console.log(data);
-// 	}
-// });
-
 var data = [{
 	name: "Votam Presedinte",
 	options: [{
@@ -74,7 +54,17 @@ var seedDB = function() {
 				});
 			});
 		}
-	});
+	// });
+	// setTimeout( function() {
+	// Poll.find({}, function(err, data) {
+	// 	if (err) {
+	// 		console.log("Error\n" + err);
+	// 	} else {
+	// 		data.forEach(function(val) {
+	// 			console.log(val);	
+	// 		});
+	// 	}
+	// })}, 3000);
 };
 
 module.exports = seedDB;
